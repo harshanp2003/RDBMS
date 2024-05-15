@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Login Page</title>
+    <style>
+        h1
+        {
+            color: white;
+            font-size: 100px;
+            text-align: center;
+        }
+        body
+        {
+            background-image: url("/images/logbg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+    * {
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+
+    .container {
+      width: 450px;
+      margin: 70px auto;
+      float: inline-end;
+      background-color:aquamarine;
+    }
+
+    .signup,
+    .login {
+      width: 50%;
+      background: white;
+      height: 60px;
+      float: left;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      text-transform: uppercase;
+
+    }
+
+    .signup-form,
+    .login-form {
+      background: white;
+      box-sizing: border-box;
+      padding: 40px;
+      clear: both;
+      width: 100%;
+      height: 300 px;
+    }
+
+    .input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      margin-bottom: 25px;
+      border: 2px solid #e9eaea;
+      color: #3e3e40;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.5s ease
+    }
+
+    .input:focus {
+      border: 2px solid #34b3a0;
+
+    }
+
+    .btn {
+      width: 100%;
+      background: #34b3a0;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-bottom: 80px;
+    }
+
+
+
+    span a {
+      text-decoration: none;
+      color: black;
+    }
+    .AAA{
+      text-align: right;
+      margin-right: 100px;
+      margin-top: 20px;
+      color: aquamarine;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="AAA" ><em>Login</em></h1>
+    <div class="container">
+        <div class="signup">Customer</div> 
+        <!-- signup class is customer -->
+        <div class="login">Employee</div>
+        <!-- login class is Employee -->
+    
+        <div class="signup-form">
+          <input type="email" placeholder="Your Email Address" class="input" required><br>
+          <input type="password" placeholder="Password" class="input" required><br>
+          <a href="/" class="btn"> Login </a> <br>
+        </div>
+    
+        <div class="login-form">
+          <input type="email" class="input" placeholder="Your Email Address" required></br>
+          <input type="password" class="input" placeholder="Password" required></br>
+          <a href="/" class="btn"> Login </a> <br>
+        </div>
+      </div>
+    
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $(".login-form").hide();
+          $(".login").css("background", "none");
+    
+          $(".login").click(function () {
+            $(".signup-form").hide();
+            $(".login-form").show();
+            $(".signup").css("background", "none");
+            $(".login").css("background", "#fff");
+          });
+    
+          $(".signup").click(function () {
+            $(".signup-form").show();
+            $(".login-form").hide();
+            $(".signup").css("background", "#fff");
+            $(".login").css("background", "none");
+          });
+    
+          $(".btn").click(function () {
+            $(".input").val("");
+          });
+        });
+      </script>   
+
+</body>
+</html>
